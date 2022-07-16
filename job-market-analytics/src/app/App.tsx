@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import FilterContainer, {FilterContainerProps} from "./components/FilterContainer";
+import FilterContainer, {FilterContainerProps} from "../features/filter/FilterContainer";
 
 const filterItems: FilterContainerProps = {
     filterItems: [
