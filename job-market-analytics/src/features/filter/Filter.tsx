@@ -1,8 +1,8 @@
-import { Form } from "react-bootstrap";
-import { useSelector } from "react-redux";
-import { selectFilterById } from "./filterSlice";
-import FilterOption from "./FilterOption";
-import { RootState } from "../../app/store";
+import { Form } from 'react-bootstrap';
+import { useSelector } from 'react-redux';
+import { selectFilterById } from './filterSlice';
+import FilterOption from './FilterOption';
+import { RootState } from '../../app/store';
 
 export type FilterProps = {
   filterId: string;
