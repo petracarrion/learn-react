@@ -25,4 +25,4 @@ export default function Filter({filterId}: FilterProps) {
 
         </Form.Group>
     );
-};
+}

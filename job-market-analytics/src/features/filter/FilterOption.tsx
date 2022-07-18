@@ -1,4 +1,4 @@
-import { Form } from "react-bootstrap";
+import {Form} from "react-bootstrap";
 import {useSelector} from "react-redux";
 import {selectFilterOptionById} from "./filterSlice";
 import {RootState} from "../../app/store";
@@ -20,4 +20,4 @@ export default function FilterOption({filterOptionId}: FilterOptionPropsOld) {
             defaultChecked={filterOption.checked}
         />
     );
-};
+}
