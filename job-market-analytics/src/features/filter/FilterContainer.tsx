@@ -1,25 +1,27 @@
-import FilterItem, {FilterItemProps} from "./FilterItem";
+import Filter from "./Filter";
 import {Col, Container, Row} from "react-bootstrap";
+import {useSelector} from "react-redux";
+import {selectAllFilterIds} from "./filterSlice";
 
 
-export type FilterContainerProps = {
-    filterItems: FilterItemProps[],
-}
 
-export default function FilterContainer({filterItems}: FilterContainerProps) {
+export default function FilterContainer() {
+    const allFilterIds = useSelector(selectAllFilterIds);
+    console.log({allFilterIds});
+
     return (
         <Container>
             <Row>
                 <Col>
-                    {filterItems.map((filterItem) =>
-                        <FilterItem
-                            key={filterItem.name}
-                            name={filterItem.name}
-                            options={filterItem.options}
+                    {allFilterIds.map((filterId) =>
+                        <Filter
+                            key={filterId}
+                            filterId={filterId}
                         />
                     )}
                 </Col>
             </Row>
+            {allFilterIds}
         </Container>
     )
 };
