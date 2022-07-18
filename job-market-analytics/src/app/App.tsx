@@ -1,8 +1,8 @@
-import React from 'react';
-import { Provider } from 'react-redux';
-import './App.css';
-import FilterContainer from '../features/filter/FilterContainer';
-import store from './store';
+import React from "react";
+import { Provider } from "react-redux";
+import "./App.css";
+import FilterContainer from "../features/filter/FilterContainer";
+import store from "./store";
 
 function App() {
   return (
