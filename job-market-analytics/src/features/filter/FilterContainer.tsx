@@ -21,7 +21,6 @@ export default function FilterContainer() {
                     )}
                 </Col>
             </Row>
-            {allFilterIds}
         </Container>
     )
 };

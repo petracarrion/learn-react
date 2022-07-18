@@ -14,7 +14,7 @@ export default function Filter({filterId}: FilterProps) {
     return (
         <Form.Group>
 
-            <Form.Label>filterId</Form.Label>
+            <Form.Label>{filterId}</Form.Label>
 
             {filter.filterOptions.map((filterOptionId) =>
                 <FilterOption
