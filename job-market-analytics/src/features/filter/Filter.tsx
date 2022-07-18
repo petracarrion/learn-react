@@ -10,7 +10,7 @@ export type FilterProps = {
 
 export default function Filter({filterId}: FilterProps) {
     const filter = useSelector(state => selectFilterById(state as RootState, filterId));
-    console.log({filter})
+
     return (
         <Form.Group>
 

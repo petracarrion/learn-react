@@ -7,7 +7,6 @@ import {selectAllFilterIds} from "./filterSlice";
 
 export default function FilterContainer() {
     const allFilterIds = useSelector(selectAllFilterIds);
-    console.log({allFilterIds});
 
     return (
         <Container>

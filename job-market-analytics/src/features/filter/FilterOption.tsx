@@ -10,7 +10,7 @@ export type FilterOptionPropsOld = {
 
 export default function FilterOption({filterOptionId}: FilterOptionPropsOld) {
     const filterOption = useSelector(state => selectFilterOptionById(state as RootState, filterOptionId));
-    console.log({filterOptionId, filterOption})
+
     return (
         <Form.Check
             key={filterOptionId}
