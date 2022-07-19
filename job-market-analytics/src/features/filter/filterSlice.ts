@@ -92,19 +92,10 @@ export const filterSlice = createSlice({
   name: "filter",
   initialState: entities,
   reducers: {
-    // increment: (state) => {
-    //     // Redux Toolkit allows us to write "mutating" logic in reducers. It
-    //     // doesn't actually mutate the state because it uses the immer library,
-    //     // which detects changes to a "draft state" and produces a brand new
-    //     // immutable state based off those changes
-    //     state.value += 1
-    // },
-    // decrement: (state) => {
-    //     state.value -= 1
-    // },
-    // toggleFilter: (state, action) => {
-    //     state.value += action.payload
-    // },
+    checkedFilterOption(state, action) {
+      state.filterOption.byId[action.payload.filterOptionId].checked =
+        action.payload.checked;
+    },
   },
 });
 
@@ -116,5 +107,7 @@ export const selectFilterOptionById = (
   state: RootState,
   filterOptionId: string
 ) => state.filter.filterOption.byId[filterOptionId];
+
+export const { checkedFilterOption } = filterSlice.actions;
 
 export default filterSlice.reducer;
